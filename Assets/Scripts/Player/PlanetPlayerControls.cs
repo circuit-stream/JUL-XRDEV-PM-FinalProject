@@ -1,3 +1,4 @@
+using System.Security.Cryptography;
 using UnityEngine;
 
 public class PlanetPlayerControls : MonoBehaviour
@@ -16,6 +17,7 @@ public class PlanetPlayerControls : MonoBehaviour
 
         // Detect whether VR is present or not
         usingVR = Util.IsVRPresent();
+        Debug.Log($"VR: {usingVR}");
     }
 
     void Update()
@@ -57,17 +59,34 @@ public class PlanetPlayerControls : MonoBehaviour
         camera.transform.Rotate(vertical * turningSpeed * Time.deltaTime, 0, 0);
 
         // TODO: These vectors should be projected onto the normal of the ground beneath the player using a raycast
-
+        if (!Physics.Raycast(transform.position + transform.up * 1f, -transform.up, out var hit))
+        {
+            Debug.Log($"Somehow didn't hit the ground under the player's feet");
+            return;
+        }
+        
+        // Project the forward and strafe directions of the camera onto the surface the player is standing on
+        var forwardDirection = Vector3.ProjectOnPlane(camera.transform.forward, hit.normal);
+        var strafeDirection = Vector3.ProjectOnPlane(camera.transform.forward, hit.normal);
+            
+        Debug.DrawRay(transform.position, camera.transform.forward, Color.green);
+        Debug.DrawRay(transform.position, Vector3.ProjectOnPlane(camera.transform.forward, transform.up), Color.red);
+        Debug.DrawRay(transform.position, forwardDirection, Color.yellow);
+        
+        Debug.DrawRay(transform.position, camera.transform.right, Color.green);
+        Debug.DrawRay(transform.position, Vector3.ProjectOnPlane(camera.transform.right, transform.up), Color.red);
+        Debug.DrawRay(transform.position, strafeDirection, Color.yellow);
+            
         // Handle forward movement
-        transform.position += Vector3.ProjectOnPlane(camera.transform.forward, transform.up)
-            * forward
-            * movementSpeed
-            * Time.deltaTime;
+        transform.position += forwardDirection
+                              * forward
+                              * movementSpeed
+                              * Time.deltaTime;
 
         // Handle strafe movement
-        transform.position += Vector3.ProjectOnPlane(camera.transform.right, transform.up)
-            * strafe
-            * movementSpeed
-            * Time.deltaTime;
+        transform.position += strafeDirection
+                              * strafe
+                              * movementSpeed
+                              * Time.deltaTime;
     }
 }
