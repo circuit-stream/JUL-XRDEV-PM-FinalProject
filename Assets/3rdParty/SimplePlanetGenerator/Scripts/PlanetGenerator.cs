@@ -47,7 +47,7 @@ public class PlanetGenerator : MonoBehaviour {
 
 	float offset = 0.0f;
 
-	void Start(){
+	void Awake(){
 		GetMeshInfo ();
 		GenerateHeights ();
 		Visualize ();

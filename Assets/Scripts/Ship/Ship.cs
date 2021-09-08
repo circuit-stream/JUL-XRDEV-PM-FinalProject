@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public enum ShipQuadrant
@@ -17,9 +18,12 @@ public class Ship : MonoBehaviour
     public LandingThruster frontRightLanderthruster;
     public LandingThruster backLeftLanderthruster;
     public LandingThruster backRightLanderthruster;
+    public float nonDirectHitDamageMultiplier = 0.25f;
 
     private Rigidbody rigidBody;
     internal bool playerOnboard;
+    
+    public List<ShipSystem> shipSystems = new List<ShipSystem>();
 
     void Start()
     {
@@ -69,6 +73,29 @@ public class Ship : MonoBehaviour
                 return backRightLanderthruster;
             default:
                 throw new ArgumentOutOfRangeException(nameof(quadrant), quadrant, null);
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        // Find out what part of the ship was hit
+        var colliderHit = collision.contacts[0].thisCollider;
+
+        // If the collider on the ship that was hit was system assosiated with it
+        var shipSystem = colliderHit.GetComponent<ShipSystem>();
+        if(shipSystem != null)
+        {
+            // Let that system know it was hit and how hard (== how fast)
+            shipSystem.OnImpact(collision.relativeVelocity.magnitude);
+        }
+        // If no particular system was hit
+        else
+        {
+            // Get a random ship system
+            var randomShipSystem = shipSystems[UnityEngine.Random.Range(0, shipSystems.Count)];
+
+            // Impact that system but with less force than a direct hit
+            randomShipSystem.OnImpact(collision.relativeVelocity.magnitude * nonDirectHitDamageMultiplier);
         }
     }
 }

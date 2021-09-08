@@ -56,16 +56,25 @@ public class PlanetPlayerControls : MonoBehaviour
         transform.Rotate(0, horizontal * turningSpeed * Time.deltaTime, 0);
         camera.transform.Rotate(vertical * turningSpeed * Time.deltaTime, 0, 0);
 
-        // TODO: These vectors should be projected onto the normal of the ground beneath the player using a raycast
+        // These vectors should be projected onto the normal of the ground beneath the player using a raycast
+        if (!Physics.Raycast(transform.position + transform.up * 1f, -transform.up, out var hit))
+        {
+            Debug.Log($"Somehow didn't hit the ground under the player's feet");
+            return;
+        }
+
+        // Project the forward and strafe directions of the camera onto the surface the player is standing on
+        var forwardDirection = Vector3.ProjectOnPlane(camera.transform.forward, hit.normal);
+        var strafeDirection = Vector3.ProjectOnPlane(camera.transform.right, hit.normal);
 
         // Handle forward movement
-        transform.position += Vector3.ProjectOnPlane(camera.transform.forward, transform.up)
+        transform.position += forwardDirection
             * forward
             * movementSpeed
             * Time.deltaTime;
 
         // Handle strafe movement
-        transform.position += Vector3.ProjectOnPlane(camera.transform.right, transform.up)
+        transform.position += strafeDirection
             * strafe
             * movementSpeed
             * Time.deltaTime;
