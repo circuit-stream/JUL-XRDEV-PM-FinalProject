@@ -9,12 +9,18 @@ public class Player : MonoBehaviour
     public GameObject planetRig;
     public GameObject shipRig;
     public Transform shipExitPoint;
-    public float shipBoardingDistance = 50;
+    public float shipBoardingDistance = 10;
     public float scrapCollected;
     public float scrapPerIntegrity = 0.1f;
+    
+    private Game _game;
+    private Sounds _sounds;
 
     void Start()
     {
+        _game = FindObjectOfType<Game>();
+        _sounds = FindObjectOfType<Sounds>();
+        
         // Start inside the ship
         EnterShip();
     }
@@ -31,17 +37,30 @@ public class Player : MonoBehaviour
                 LeaveShip();
             }
             // If the player is on the planet (and nearby the ship)
-            else if(Vector3.Distance(ship.transform.position, planetRig.transform.position) <= shipBoardingDistance)
+            else if(Vector3.Distance(ship.transform.position, planetRig.transform.position) <= shipBoardingDistance / Ship.unitsToMeters)
             {
                 // Enter the ship
                 EnterShip();
             }
         }
+        
+        // TESTING: Cycle through the planets
+        if (Input.GetKeyDown(KeyCode.F1))
+        {
+            _game.MoveToNextPlanet();
+        }
+        
+        // TESTING: Cheat for lots of scrap
+        if (Input.GetKeyDown(KeyCode.F2))
+        {
+            scrapCollected += 10f;
+        }
     }
 
     internal void OnScrapCollected(Scrap scrap)
     {
-        // TODO: Play the scrap pickup sound
+        // Play the scrap pickup sound
+        _sounds.PlayAtSource(Sounds.Type.Pickup, transform);
 
         // Add the scrap to the inventory
         scrapCollected += 1;
@@ -90,6 +109,9 @@ public class Player : MonoBehaviour
         // Calculate the maximum amount of scrap the player can afford to repair the system
         var scrapAvailableToRepair = Mathf.Min(scrapCollected, scrapToRepair);
 
+        // Play the repair sound (using the same volume as the damaged system's damage sound)
+        _sounds.PlayAtSource(Sounds.Type.ExtinguishFire, transform, shipSystem._damageSound.volume);
+        
         // Repair the ship system as much as possible
         shipSystem.integrity += scrapAvailableToRepair / scrapPerIntegrity;
         shipSystem.UpdateDamage();

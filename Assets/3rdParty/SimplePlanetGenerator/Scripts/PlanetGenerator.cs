@@ -1,5 +1,7 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using System.Collections;
+using Random = UnityEngine.Random;
 
 public class PlanetGenerator : MonoBehaviour {
 
@@ -49,6 +51,13 @@ public class PlanetGenerator : MonoBehaviour {
 
 	void Awake(){
 		GetMeshInfo ();
+		
+		// Generate the planet
+		GeneratePlanet();
+	}
+
+	public void GeneratePlanet()
+	{
 		GenerateHeights ();
 		Visualize ();
 		Colorize ();
@@ -78,7 +87,7 @@ public class PlanetGenerator : MonoBehaviour {
 	}
 
 	void GenerateSimplex(){
-		simplex = new Simplex (seed.ToString());
+		simplex = new Simplex ();
 		for (int count = 0; count < vertices.Length; count++) {
 			heights [count] = simplex.coherentNoise (vertices [count].x, vertices [count].y, vertices [count].z, oct, multi, amp, lac, pers);
 		}

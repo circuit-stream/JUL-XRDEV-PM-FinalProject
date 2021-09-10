@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4247399454492333163
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4247399454492333160}
+  - component: {fileID: 4247399454492333161}
+  m_Layer: 0
+  m_Name: Sounds
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4247399454492333160
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4247399454492333163}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4247399454492333161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4247399454492333163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd504d4f68240164fa9ac9540010c806, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sounds:
+  - _type: 0
+    _clips:
+    - {fileID: 8300000, guid: c5b875a2114af1546a4509296df7d461, type: 3}
+    - {fileID: 8300000, guid: 55c06048b2785794f8733037c7d7cf5d, type: 3}
+    - {fileID: 8300000, guid: bac69091f210f3644b634bedc267814a, type: 3}
+    - {fileID: 8300000, guid: 152cb546e73df0b4f909207633c60ab0, type: 3}
+  - _type: 1
+    _clips:
+    - {fileID: 8300000, guid: 31d0e45349425ba429518e544b011d01, type: 3}
+    - {fileID: 8300000, guid: c52bfd3c491d89e41b6e2e9261d10a0d, type: 3}
+    - {fileID: 8300000, guid: 87c17f2cca113d14992480f40f8eb435, type: 3}
+  - _type: 2
+    _clips:
+    - {fileID: 8300000, guid: 20cf3deddb459ce47a69b73b70fce09d, type: 3}
+    - {fileID: 8300000, guid: 42a6ffa58708d56429f50688a1cae0f3, type: 3}
+    - {fileID: 8300000, guid: 52e9e70b03b072541a95cfde1c637ff5, type: 3}
+  - _type: 3
+    _clips:
+    - {fileID: 8300000, guid: b89ceac12d111a240a0b9d664e68347c, type: 3}
+  - _type: 4
+    _clips:
+    - {fileID: 8300000, guid: 5412b175d6b7ade48af973e62498600d, type: 3}
+  - _type: 5
+    _clips:
+    - {fileID: 8300000, guid: a263bf2b2a123604d80c7cfee55d884b, type: 3}
+  _audioSourcePrefab: {fileID: 3237722823898917991, guid: f8f87b53416c34842b8a95a6a1d27205, type: 3}

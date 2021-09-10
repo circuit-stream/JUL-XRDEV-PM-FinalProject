@@ -4,7 +4,6 @@ using UnityEngine;
 public class WristDisplay : MonoBehaviour
 {
     public TMP_Text scrapNumber;
-    public float distanceScale = 0.2f;
     public Transform shipDirectionIndicator;
     public TMP_Text shipDistanceDisplay;
 
@@ -25,7 +24,7 @@ public class WristDisplay : MonoBehaviour
         // Calculate the distance and direction to the ship
         var shipDelta = ship.transform.position - transform.position;
         var shipDirection = shipDelta.normalized;
-        var shipDistance = shipDelta.magnitude * distanceScale;
+        var shipDistance = shipDelta.magnitude * Ship.unitsToMeters;
 
         // Rotate the ship direction indicator to point towards the ship
         shipDirectionIndicator.up = shipDirection;

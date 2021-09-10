@@ -4,19 +4,12 @@ using UnityEngine;
 
 public class PlanetSurfaceGravity : MonoBehaviour
 {
-    public Transform planet;
-    //public float gravity = -9.8f;
-
-    private Rigidbody rigidBody;
-
-    void Start()
-    {
-        rigidBody = GetComponent<Rigidbody>();
-    }
-
     // Update is called once per frame
     void Update()
     {
+        // Get the current planet
+        var planet = GameObject.FindWithTag("Planet").transform;
+        
         // Calculate the up direction from where this object is on the planet
         var planetUp = (transform.position - planet.position).normalized;
 

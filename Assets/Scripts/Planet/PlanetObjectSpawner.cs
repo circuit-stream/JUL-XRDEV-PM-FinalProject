@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlanetObjectSpawner : MonoBehaviour
@@ -11,7 +9,7 @@ public class PlanetObjectSpawner : MonoBehaviour
     public float distanceToFall = 1f;
     public Transform parent;
 
-    void Start()
+    public void SpawnObjects()
     {
         // Determine how many of the object to spawn
         var number = Random.Range(minNumber, maxNumber);

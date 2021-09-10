@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class LandingThruster : ShipSystem
@@ -38,6 +35,17 @@ public class LandingThruster : ShipSystem
         sounds.SetCrossFade(percentThrust);
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.F12))
+            integrity = 0f;
+        
+        if (Input.GetKeyDown(KeyCode.F11))
+            integrity = Mathf.Clamp(integrity + 10f, 0, maxIntegrity);
+    
+        UpdateDamage();
+    }
+
     public override void UpdateDamage()
     {
         base.UpdateDamage();
@@ -47,9 +55,6 @@ public class LandingThruster : ShipSystem
 
         // Update the fire particles based on the integrity
         var emission = damageParticles.emission;
-        // TODO: Fix the error here
-        //emission.rateOverTimeMultiplier = Mathf.Lerp(0, maxDamageParticlesEmission, 1f - integrityPercent);
-
-        // TODO: Set the volume of the damage sound
+        emission.rateOverTimeMultiplier = Mathf.Lerp(0, maxDamageParticlesEmission, 1f - integrityPercent);
     }
 }

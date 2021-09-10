@@ -21,7 +21,6 @@ public class Simplex {
 	public Simplex(string seed) {
 		T = new int[8];
 		string[] seed_parts = seed.Split(new char[] {' '});
-		
 		for(int q = 0; q < 8; q++) {
 			int b;
 			try {

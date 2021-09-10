@@ -1,0 +1,144 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &7533207078666729435
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1617687820, guid: ec9c17925bdfae1478003795bb45dc15, type: 3}
+      propertyPath: parent
+      value: 
+      objectReference: {fileID: 8441175172890443450}
+    - target: {fileID: 711080974304234458, guid: ec9c17925bdfae1478003795bb45dc15, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4574667232156107772, guid: ec9c17925bdfae1478003795bb45dc15, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4574667232156107772, guid: ec9c17925bdfae1478003795bb45dc15, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 23.919
+      objectReference: {fileID: 0}
+    - target: {fileID: 4574667232156107772, guid: ec9c17925bdfae1478003795bb45dc15, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 23.919
+      objectReference: {fileID: 0}
+    - target: {fileID: 4574667232156107772, guid: ec9c17925bdfae1478003795bb45dc15, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 23.919
+      objectReference: {fileID: 0}
+    - target: {fileID: 4574667232156107772, guid: ec9c17925bdfae1478003795bb45dc15, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4574667232156107772, guid: ec9c17925bdfae1478003795bb45dc15, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4574667232156107772, guid: ec9c17925bdfae1478003795bb45dc15, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4574667232156107772, guid: ec9c17925bdfae1478003795bb45dc15, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -4.3297806e-17
+      objectReference: {fileID: 0}
+    - target: {fileID: 4574667232156107772, guid: ec9c17925bdfae1478003795bb45dc15, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -4.32978e-17
+      objectReference: {fileID: 0}
+    - target: {fileID: 4574667232156107772, guid: ec9c17925bdfae1478003795bb45dc15, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: 4574667232156107772, guid: ec9c17925bdfae1478003795bb45dc15, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4574667232156107772, guid: ec9c17925bdfae1478003795bb45dc15, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4574667232156107772, guid: ec9c17925bdfae1478003795bb45dc15, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4574667232156107772, guid: ec9c17925bdfae1478003795bb45dc15, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4574667232156417562, guid: ec9c17925bdfae1478003795bb45dc15, type: 3}
+      propertyPath: m_Name
+      value: GreyPlanet
+      objectReference: {fileID: 0}
+    - target: {fileID: 4574667232156417562, guid: ec9c17925bdfae1478003795bb45dc15, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4574667232156417562, guid: ec9c17925bdfae1478003795bb45dc15, type: 3}
+      propertyPath: m_TagString
+      value: Planet
+      objectReference: {fileID: 0}
+    - target: {fileID: 4574667232166128084, guid: ec9c17925bdfae1478003795bb45dc15, type: 3}
+      propertyPath: strength
+      value: 7.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4574667232166128084, guid: ec9c17925bdfae1478003795bb45dc15, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4574667232166197412, guid: ec9c17925bdfae1478003795bb45dc15, type: 3}
+      propertyPath: seed
+      value: 0.7085809
+      objectReference: {fileID: 0}
+    - target: {fileID: 4574667232166197412, guid: ec9c17925bdfae1478003795bb45dc15, type: 3}
+      propertyPath: depth
+      value: 0.69
+      objectReference: {fileID: 0}
+    - target: {fileID: 4574667232166197412, guid: ec9c17925bdfae1478003795bb45dc15, type: 3}
+      propertyPath: height
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4574667232166197412, guid: ec9c17925bdfae1478003795bb45dc15, type: 3}
+      propertyPath: cliffPeak
+      value: 0.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 4574667232166197412, guid: ec9c17925bdfae1478003795bb45dc15, type: 3}
+      propertyPath: hillStart
+      value: -0.41
+      objectReference: {fileID: 0}
+    - target: {fileID: 4574667232166197412, guid: ec9c17925bdfae1478003795bb45dc15, type: 3}
+      propertyPath: isSimplex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4574667232166197412, guid: ec9c17925bdfae1478003795bb45dc15, type: 3}
+      propertyPath: waterLevel
+      value: 6.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 4574667232166197412, guid: ec9c17925bdfae1478003795bb45dc15, type: 3}
+      propertyPath: hillDevider
+      value: 0.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4574667232166197412, guid: ec9c17925bdfae1478003795bb45dc15, type: 3}
+      propertyPath: hillPeakColor.rgba
+      value: 4283585113
+      objectReference: {fileID: 0}
+    - target: {fileID: 4574667232166197412, guid: ec9c17925bdfae1478003795bb45dc15, type: 3}
+      propertyPath: aboveWaterColor.rgba
+      value: 4288782753
+      objectReference: {fileID: 0}
+    - target: {fileID: 4574667232166197412, guid: ec9c17925bdfae1478003795bb45dc15, type: 3}
+      propertyPath: underWaterColor.rgba
+      value: 4287072135
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ec9c17925bdfae1478003795bb45dc15, type: 3}
+--- !u!224 &8441175172890443450 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 2138725987781200225, guid: ec9c17925bdfae1478003795bb45dc15, type: 3}
+  m_PrefabInstance: {fileID: 7533207078666729435}
+  m_PrefabAsset: {fileID: 0}

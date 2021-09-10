@@ -1,0 +1,128 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &4700724620116635568
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1617687820, guid: ec9c17925bdfae1478003795bb45dc15, type: 3}
+      propertyPath: parent
+      value: 
+      objectReference: {fileID: 6670415810707875537}
+    - target: {fileID: 687361105263760882, guid: ec9c17925bdfae1478003795bb45dc15, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5171d2acba6822a47ba6559f640d74d8, type: 2}
+    - target: {fileID: 4574667232156107772, guid: ec9c17925bdfae1478003795bb45dc15, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4574667232156107772, guid: ec9c17925bdfae1478003795bb45dc15, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4574667232156107772, guid: ec9c17925bdfae1478003795bb45dc15, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4574667232156107772, guid: ec9c17925bdfae1478003795bb45dc15, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4574667232156107772, guid: ec9c17925bdfae1478003795bb45dc15, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -4.3297806e-17
+      objectReference: {fileID: 0}
+    - target: {fileID: 4574667232156107772, guid: ec9c17925bdfae1478003795bb45dc15, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -4.32978e-17
+      objectReference: {fileID: 0}
+    - target: {fileID: 4574667232156107772, guid: ec9c17925bdfae1478003795bb45dc15, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: 4574667232156107772, guid: ec9c17925bdfae1478003795bb45dc15, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4574667232156107772, guid: ec9c17925bdfae1478003795bb45dc15, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4574667232156107772, guid: ec9c17925bdfae1478003795bb45dc15, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4574667232156107772, guid: ec9c17925bdfae1478003795bb45dc15, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4574667232156417562, guid: ec9c17925bdfae1478003795bb45dc15, type: 3}
+      propertyPath: m_Name
+      value: RedPlanet
+      objectReference: {fileID: 0}
+    - target: {fileID: 4574667232156417562, guid: ec9c17925bdfae1478003795bb45dc15, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4574667232156417562, guid: ec9c17925bdfae1478003795bb45dc15, type: 3}
+      propertyPath: m_TagString
+      value: Planet
+      objectReference: {fileID: 0}
+    - target: {fileID: 4574667232166128084, guid: ec9c17925bdfae1478003795bb45dc15, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4574667232166197412, guid: ec9c17925bdfae1478003795bb45dc15, type: 3}
+      propertyPath: seed
+      value: 0.32023492
+      objectReference: {fileID: 0}
+    - target: {fileID: 4574667232166197412, guid: ec9c17925bdfae1478003795bb45dc15, type: 3}
+      propertyPath: cliff
+      value: -0.89
+      objectReference: {fileID: 0}
+    - target: {fileID: 4574667232166197412, guid: ec9c17925bdfae1478003795bb45dc15, type: 3}
+      propertyPath: height
+      value: 0.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 4574667232166197412, guid: ec9c17925bdfae1478003795bb45dc15, type: 3}
+      propertyPath: hillStart
+      value: 0.63
+      objectReference: {fileID: 0}
+    - target: {fileID: 4574667232166197412, guid: ec9c17925bdfae1478003795bb45dc15, type: 3}
+      propertyPath: waterLine
+      value: -10.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4574667232166197412, guid: ec9c17925bdfae1478003795bb45dc15, type: 3}
+      propertyPath: groundArea
+      value: 0.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 4574667232166197412, guid: ec9c17925bdfae1478003795bb45dc15, type: 3}
+      propertyPath: waterLevel
+      value: 6.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4574667232166197412, guid: ec9c17925bdfae1478003795bb45dc15, type: 3}
+      propertyPath: hillDevider
+      value: 6.81
+      objectReference: {fileID: 0}
+    - target: {fileID: 4574667232166197412, guid: ec9c17925bdfae1478003795bb45dc15, type: 3}
+      propertyPath: hillPeakColor.rgba
+      value: 4278801364
+      objectReference: {fileID: 0}
+    - target: {fileID: 4574667232166197412, guid: ec9c17925bdfae1478003795bb45dc15, type: 3}
+      propertyPath: aboveWaterColor.rgba
+      value: 4280185561
+      objectReference: {fileID: 0}
+    - target: {fileID: 4574667232166197412, guid: ec9c17925bdfae1478003795bb45dc15, type: 3}
+      propertyPath: underWaterColor.rgba
+      value: 4282157038
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ec9c17925bdfae1478003795bb45dc15, type: 3}
+--- !u!224 &6670415810707875537 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 2138725987781200225, guid: ec9c17925bdfae1478003795bb45dc15, type: 3}
+  m_PrefabInstance: {fileID: 4700724620116635568}
+  m_PrefabAsset: {fileID: 0}
